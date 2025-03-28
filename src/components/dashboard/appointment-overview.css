@@ -1,0 +1,225 @@
+/* Modern styling for the appointment overview */
+
+/* Calendar styling */
+.rbc-calendar {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.rbc-calendar:hover {
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.rbc-header {
+  padding: 12px 8px;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f5f9;
+  background-color: #f8fafc;
+}
+
+.rbc-time-view {
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+}
+
+.rbc-time-header {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.rbc-time-header-content {
+  border-left: none;
+}
+
+.rbc-time-content {
+  border-top: 1px solid #f1f5f9;
+}
+
+.rbc-time-slot {
+  border-top: none;
+}
+
+.rbc-timeslot-group {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.rbc-time-gutter .rbc-timeslot-group {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  border-top: none;
+}
+
+.rbc-time-content > * + * > * {
+  border-left: 1px solid #f1f5f9;
+}
+
+.rbc-current-time-indicator {
+  background-color: #3b82f6;
+  height: 2px;
+}
+
+/* Event styling */
+.rbc-event {
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 6px 10px;
+  border: none;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.rbc-event:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Table styling for list view */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+thead tr {
+  background-color: #f8fafc;
+}
+
+th {
+  font-weight: 500;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #64748b;
+}
+
+tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+td {
+  padding: 12px 16px;
+  vertical-align: middle;
+}
+
+/* Card styling */
+.card-container {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.card-container:hover {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Improved table styling */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead tr {
+  background-color: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+th {
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 16px;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+td {
+  padding: 14px 16px;
+  vertical-align: middle;
+  font-size: 0.875rem;
+}
+
+/* Filter section styling */
+.filter-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.filter-section:hover {
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Status badge styling */
+.status-badge {
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.status-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar day styling */
+.react-calendar {
+  border: none;
+  width: 100%;
+}
+
+.react-calendar__tile--active {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 4px;
+}
+
+.react-calendar__tile--now {
+  background-color: #dbeafe;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-section {
+    margin-bottom: 1rem;
+  }
+}

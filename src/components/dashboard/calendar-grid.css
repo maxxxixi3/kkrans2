@@ -1,0 +1,75 @@
+/* Custom CSS for calendar grid lines */
+.rbc-calendar-with-grid .rbc-time-content {
+  border-top: 1px solid #f1f5f9;
+}
+
+.rbc-calendar-with-grid .rbc-timeslot-group {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.rbc-calendar-with-grid .rbc-time-content > * + * > * {
+  border-left: 1px solid #f1f5f9;
+}
+
+.rbc-calendar-with-grid .rbc-time-header-content {
+  border-left: 1px solid #f1f5f9;
+}
+
+.rbc-calendar-with-grid .rbc-time-view {
+  border: 1px solid #f1f5f9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rbc-calendar-with-grid .rbc-time-header {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.rbc-calendar-with-grid .rbc-day-slot .rbc-time-slot {
+  border-top: 1px dashed #f8fafc;
+}
+
+.rbc-calendar-with-grid .rbc-time-slot {
+  border-top: 1px dashed #f8fafc;
+}
+
+.rbc-calendar-with-grid .rbc-current-time-indicator {
+  background-color: #3b82f6;
+  height: 2px;
+}
+
+.rbc-calendar-with-grid .rbc-header {
+  font-weight: 600;
+  padding: 12px 10px;
+  background-color: #f8fafc;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+.rbc-calendar-with-grid .rbc-label {
+  padding: 12px 10px;
+  font-weight: 600;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.rbc-calendar-with-grid .rbc-event {
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.rbc-calendar-with-grid .rbc-event:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.rbc-calendar-with-grid .rbc-event-label {
+  font-size: 0.75rem;
+}
+
+.rbc-calendar-with-grid .rbc-event-content {
+  font-size: 0.875rem;
+}
