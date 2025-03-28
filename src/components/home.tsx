@@ -109,6 +109,7 @@ const Home = ({ className }: HomeProps) => {
     <div className={cn("min-h-screen bg-white", className)}>
       <Header />
       <main className="container max-w-6xl py-[80] py-[900] flex top-[90] right-0 bottom-0 relative top-[90px] justify-end items-center flex-col">
+        <img src="/logo.svg" alt="Logo" className="h-16 mb-6" />
         <div className="text-center mb-8 py-2.5">
           <h1 className="text-3xl font-bold mb-2">
             Krankentransport Terminbuchung

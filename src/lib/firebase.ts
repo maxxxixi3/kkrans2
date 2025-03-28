@@ -4,6 +4,8 @@ import {
   sendSignInLinkToEmail,
   isSignInWithEmailLink,
   signInWithEmailLink,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import {
   getFirestore,
@@ -71,6 +73,57 @@ try {
 }
 
 // Authentication helper functions
+export const signUpWithEmailAndPassword = async (
+  email: string,
+  password: string,
+) => {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password,
+    );
+
+    // Create user record in Firestore
+    const userRef = doc(db, "staff", userCredential.user.uid);
+    await setDoc(userRef, {
+      email: userCredential.user.email,
+      role: "staff", // Default role
+      createdAt: serverTimestamp(),
+      lastLogin: serverTimestamp(),
+    });
+
+    return { success: true, user: userCredential.user };
+  } catch (error) {
+    console.error("Error signing up with email and password:", error);
+    return { success: false, error };
+  }
+};
+
+export const loginWithEmailAndPassword = async (
+  email: string,
+  password: string,
+) => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password,
+    );
+
+    // Update last login timestamp
+    const userRef = doc(db, "staff", userCredential.user.uid);
+    await updateDoc(userRef, {
+      lastLogin: serverTimestamp(),
+    });
+
+    return { success: true, user: userCredential.user };
+  } catch (error) {
+    console.error("Error signing in with email and password:", error);
+    return { success: false, error };
+  }
+};
+
 export const sendMagicLink = async (email: string, redirectUrl: string) => {
   const actionCodeSettings = {
     url: redirectUrl,

@@ -47,7 +47,7 @@ const Header = ({ onLoginClick }: HeaderProps) => {
       <div className="container mx-auto h-full flex items-center justify-between px-4">
         <div className="flex items-center gap-2">
           <img
-            src="/assets/images/logo.webp"
+            src="/logo.svg"
             alt="Logo"
             className="h-10 cursor-pointer"
             onClick={() => navigate("/")}
